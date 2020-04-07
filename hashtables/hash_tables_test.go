@@ -19,8 +19,18 @@ func TestNewHashTable(t *testing.T) {
 func TestInsert(t *testing.T) {
 	ht := NewHashTable(3)
 	ht.Insert(1, 2)
-	ht.Insert(0, 1)
-	if ht.t[1][0].value != 2 && ht.t[0][1].value != 1 {
-		t.Error("no insertion")
+	ht.Insert(1, 1)
+	if ht.t[1][0].value != 2 && ht.t[1][1].value != 1 {
+		t.Error("No insertion")
+	}
+}
+
+func TestSearch(t *testing.T) {
+	ht := NewHashTable(3)
+	ht.Insert(1, 2)
+	ht.Insert(1, 1)
+	res := ht.Search(1)
+	if res[0].value != 2 {
+		t.Error("Not found")
 	}
 }

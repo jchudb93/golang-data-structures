@@ -31,10 +31,15 @@ func (ht *HashTable) HashFunc(key int) int {
 func (ht *HashTable) Insert(key, value int) {
 	hash := ht.HashFunc(key)
 	if len(ht.t[hash]) > 0 {
-
 		ht.t[hash] = append(ht.t[hash], *NewHashTableEntry(key, value))
 	} else {
 		ht.t[hash] = make([]HashTableEntry, 1)
 		ht.t[hash][0] = *NewHashTableEntry(key, value)
 	}
+}
+
+// Search searches in hash table
+func (ht *HashTable) Search(key int) []HashTableEntry {
+	hash := ht.HashFunc(key)
+	return ht.t[hash]
 }
