@@ -15,3 +15,12 @@ func TestNewHashTable(t *testing.T) {
 		t.Error("Hash not created")
 	}
 }
+
+func TestInsert(t *testing.T) {
+	ht := NewHashTable(3)
+	ht.Insert(1, 2)
+	ht.Insert(0, 1)
+	if ht.t[1][0].value != 2 && ht.t[0][1].value != 1 {
+		t.Error("no insertion")
+	}
+}

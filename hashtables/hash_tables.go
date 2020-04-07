@@ -31,6 +31,7 @@ func (ht *HashTable) HashFunc(key int) int {
 func (ht *HashTable) Insert(key, value int) {
 	hash := ht.HashFunc(key)
 	if len(ht.t[hash]) > 0 {
+
 		ht.t[hash] = append(ht.t[hash], *NewHashTableEntry(key, value))
 	} else {
 		ht.t[hash] = make([]HashTableEntry, 1)
