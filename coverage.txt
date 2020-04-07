@@ -1,1 +1,11 @@
 
+mode: set
+mode: set
+golang-data-structures/hashtables/hash_tables.go:10.56,12.2 1 1
+golang-data-structures/hashtables/hash_tables.go:21.45,23.2 1 1
+golang-data-structures/hashtables/hash_tables.go:26.44,28.2 1 1
+golang-data-structures/hashtables/hash_tables.go:31.45,33.25 2 1
+golang-data-structures/hashtables/hash_tables.go:33.25,35.3 1 1
+golang-data-structures/hashtables/hash_tables.go:35.8,38.3 2 1
+golang-data-structures/hashtables/hash_tables.go:42.55,45.2 2 1
+golang-data-structures/hashtables/hash_tables.go:48.38,51.2 2 1
