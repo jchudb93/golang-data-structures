@@ -34,3 +34,13 @@ func TestSearch(t *testing.T) {
 		t.Error("Not found")
 	}
 }
+
+func TestRemove(t *testing.T) {
+	ht := NewHashTable(3)
+	ht.Insert(1, 2)
+	ht.Insert(1, 1)
+	ht.Remove(1)
+	if len(ht.t[1]) > 0 {
+		t.Error("Not removed")
+	}
+}

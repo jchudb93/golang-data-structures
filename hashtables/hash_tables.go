@@ -43,3 +43,9 @@ func (ht *HashTable) Search(key int) []HashTableEntry {
 	hash := ht.HashFunc(key)
 	return ht.t[hash]
 }
+
+// Remove key
+func (ht *HashTable) Remove(key int) {
+	hash := ht.HashFunc(key)
+	ht.t[hash] = []HashTableEntry{}
+}
