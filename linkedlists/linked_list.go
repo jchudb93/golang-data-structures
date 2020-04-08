@@ -47,13 +47,20 @@ func (ll *LinkedList) AppendToTail(d int) {
 func (ll *LinkedList) DeleteNode(d int) {
 	if ll.Length == 0 {
 		fmt.Println("Empty list")
-		return
 	} else {
-		head := ll.head
-		for head.next != nil {
-			if head.next.data == d {
-				head.next = head.next.next
+		var head *Node
+		head = ll.head
+		fmt.Println(head.next)
+		if head.data == d {
+			head = head.next
+		} else {
+			for head.next != nil {
+				if head.next.data == d {
+					head.next = head.next.next
+				}
 			}
 		}
+		ll.head = head
+		ll.Length--
 	}
 }

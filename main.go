@@ -3,5 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("rip")
+	var pc *int
+	var c int
+	c = 3
+	pc = &c
+	*pc = 2
+	fmt.Println(c)
 }
