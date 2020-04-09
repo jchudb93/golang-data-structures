@@ -33,3 +33,12 @@ func TestPeek(t *testing.T) {
 		t.Error("No peek")
 	}
 }
+
+func TestIsEmpty(t *testing.T) {
+	stack := NewStack()
+	stack.Pop()
+	stack.Peek()
+	if stack.IsEmpty() == false {
+		t.Error("Not empty error")
+	}
+}
