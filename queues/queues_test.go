@@ -28,6 +28,7 @@ func TestEnqueue(t *testing.T) {
 
 func TestDequeue(t *testing.T) {
 	q := NewQueue()
+	q.Dequeue()
 	q.Enqueue(1)
 	q.Enqueue(4)
 	res := q.Dequeue()
